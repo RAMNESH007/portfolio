@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ramnesh Kumar Sahu</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050605">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#050605;--bg2:#0b0d0b;--fg:#ffffff;--mut:#a3ada5;--ac:#3ddc4a;--ln:#26302a;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050605}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--mut);font:400 15px/1.7 "Fira Code",ui-monospace,Menlo,Consolas,monospace}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.w{max-width:1100px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{color:var(--fg);font-weight:600;display:flex;gap:10px;align-items:center}
+.logo i{width:16px;height:16px;border:2px solid var(--ac);display:inline-block;box-shadow:4px 4px 0 var(--ac)}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav ul a:hover{color:var(--fg)}
+.h{color:var(--ac)}
+#bg{display:none;background:none;border:1px solid var(--ln);color:var(--fg);font:inherit;padding:4px 10px;cursor:pointer}
+section{padding:72px 0}
+h2{color:var(--fg);font-size:32px;font-weight:500;margin:0 0 40px;display:flex;align-items:center;gap:20px}
+h2::after{content:"";height:1px;background:var(--ac);flex:0 1 280px}
+h2 span{color:var(--ac)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:78vh}
+h1{color:var(--fg);font-size:clamp(28px,4vw,40px);line-height:1.3;font-weight:600;margin:0 0 24px}
+h1 em{font-style:normal;color:var(--ac)}
+.btn{display:inline-block;border:1px solid var(--ac);color:var(--fg);padding:10px 18px;background:none;font:inherit;cursor:pointer;transition:background .2s}
+.btn:hover{background:rgba(61,220,74,.14);box-shadow:0 0 18px rgba(61,220,74,.35)}
+.btn.g{border-color:var(--ln);color:var(--mut)}
+.cur{display:inline-block;width:9px;height:1.1em;background:var(--ac);vertical-align:-3px;margin-left:4px;animation:bl 1.1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cur{animation:none}html{scroll-behavior:auto}}
+.ph{position:relative;background:repeating-linear-gradient(45deg,#0d110e,#0d110e 10px,#090c0a 10px,#090c0a 20px);border:1px dashed var(--ac);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mut);font-size:12px;padding:12px;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph img:not([src]),.ph img[src=""]{display:none}
+.hero .ph{aspect-ratio:4/5;max-width:380px;margin-left:auto}
+.stat{border:1px solid var(--ln);margin-top:-1px;padding:10px 14px;color:var(--fg);max-width:380px;margin-left:auto;display:flex;gap:10px;align-items:center}
+.stat b{width:14px;height:14px;background:var(--ac);flex:none}
+.quote{border:1px solid var(--ln);padding:24px 28px;color:var(--fg);font-size:20px;max-width:640px;margin:48px auto 0;position:relative}
+.quote small{display:block;color:var(--mut);font-size:13px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{border:1px solid var(--ln);display:flex;flex-direction:column;background:var(--bg)}
+.card .ph{aspect-ratio:16/9;border:0;border-bottom:1px solid var(--ln)}
+.tags{border-bottom:1px solid var(--ln);padding:6px 12px;font-size:12px}
+.card div.b{padding:16px 14px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{margin:0;color:var(--fg);font-size:19px;font-weight:500}
+.card p{margin:0;font-size:13.5px;flex:1}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+.acts .btn{padding:6px 12px;font-size:13px}
+.skills{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.box{border:1px solid var(--mut);min-width:200px;flex:1 1 220px;max-width:320px}
+.box h4{margin:0;padding:8px 12px;color:var(--fg);font-weight:600;font-size:14px;border-bottom:1px solid var(--mut)}
+.box p{margin:0;padding:10px 12px;font-size:13.5px}
+.tl{border-left:1px solid var(--ln);margin-left:6px}
+.tl article{padding:0 0 32px 28px;position:relative}
+.tl article::before{content:"";position:absolute;left:-6px;top:7px;width:11px;height:11px;background:var(--bg);border:1px solid var(--ac)}
+.tl h3{margin:0;color:var(--fg);font-size:18px;font-weight:500}
+.tl time{color:var(--ac);font-size:13px}
+.tl ul,.cmp ul{margin:8px 0 0;padding-left:18px;font-size:14px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.cmp>div{border:1px solid var(--ln);padding:18px}
+.cmp h3{margin:0 0 4px;color:var(--fg);font-size:16px;font-weight:500}
+.cmp .r{color:var(--ac);font-size:13px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.about .ph{aspect-ratio:1;max-width:340px}
+.contact{display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
+.contact p{max-width:480px;margin:0}
+.cbox{border:1px solid var(--mut);padding:18px 22px;color:var(--fg);min-width:280px}
+.cbox b{display:block;margin-bottom:10px}
+.cbox a{display:block;padding:3px 0;font-size:14px}
+.cbox a:hover{color:var(--ac)}
+.resume{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center}
+.doc{border:1px solid var(--ac);padding:16px 14px;aspect-ratio:3/4;background:#0b0f0c;display:flex;flex-direction:column;gap:8px;box-shadow:6px 6px 0 rgba(61,220,74,.25)}
+.doc b{color:var(--fg);font-size:10px;letter-spacing:.5px}
+.doc i{display:block;height:4px;background:var(--ln)}
+.doc i.a{background:var(--ac);width:40%}
+.resume ul{margin:0 0 20px;padding-left:18px;font-size:14px}
+.resume small{display:block;margin-top:14px;font-size:12px}
+@media (max-width:640px){.resume{grid-template-columns:1fr}.doc{max-width:180px}}
+footer{border-top:1px solid var(--ln);padding:36px 0 28px;font-size:13px}
+footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:var(--fg)}
+.rail{position:fixed;left:14px;top:0;bottom:0;width:30px;display:flex;flex-direction:column;align-items:center;z-index:10;pointer-events:none}
+.rail::before{content:"";width:1px;height:120px;background:var(--mut)}
+.rail a{pointer-events:auto;margin-top:12px;color:var(--mut);display:block;width:22px;height:22px}
+.rail a:first-child{margin-top:14px}
+.rail a:hover{color:var(--ac)}
+.rail svg{width:100%;height:100%;fill:currentColor}
+.hint{border:1px dashed var(--ac);padding:10px 14px;font-size:13px;margin-bottom:28px;color:var(--fg)}
+@media (max-width:900px){
+.grid{grid-template-columns:1fr 1fr}.hero,.about,.cmp{grid-template-columns:1fr}.hero{min-height:0;padding-top:20px}
+.hero .ph,.stat{margin-left:0}.rail{display:none}
+}
+@media (max-width:640px){
+.w{padding:0 20px}.grid{grid-template-columns:1fr}
+#bg{display:block}
+nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px;border-bottom:1px solid var(--ln);gap:16px}
+nav ul.open{display:flex}
+h2{font-size:26px}h2::after{flex:1}
+}
+</style>
+</head>
+<body>
+<div class="rail" aria-label="Social links">
+<a href="https://github.com/RAMNESH007" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+<a href="https://www.linkedin.com/in/ramnesh-sahu" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.75 9.75h3.8v1.54h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.75 2.63 4.75 6.05V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.32-1.96 2.69V21h-4z"/></svg></a>
+<a href="mailto:ramnesh07rks@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v1.2l7.5 5.2 7.5-5.2V7z"/></svg></a>
+</div>
+
+<header><div class="w"><nav>
+<a class="logo" href="#home"><i></i>Ramnesh</a>
+<button id="bg" aria-label="Toggle menu" aria-expanded="false">menu</button>
+<ul id="menu">
+<li><a href="#home"><span class="h">#</span>home</a></li>
+<li><a href="#projects"><span class="h">#</span>projects</a></li>
+<li><a href="#skills"><span class="h">#</span>skills</a></li>
+<li><a href="#experience"><span class="h">#</span>experience</a></li>
+<li><a href="#resume"><span class="h">#</span>resume</a></li>
+<li><a href="#about"><span class="h">#</span>about-me</a></li>
+<li><a href="#contact"><span class="h">#</span>contact</a></li>
+</ul></nav></div></header>
+
+<main>
+<section id="home" style="padding-top:24px"><div class="w">
+<div class="hero">
+<div>
+<h1>Ramnesh is a <em>deep-tech builder</em> working on drones, rockets and AI<span class="cur" aria-hidden="true"></span></h1>
+<p>He designs UAV airspace systems, flies model rockets and works at the intersection of embedded systems where hardware meets software.</p>
+<p style="margin-top:28px"><a class="btn" href="#contact">Contact me</a> &nbsp; <a class="btn g" href="#projects">See projects</a></p>
+</div>
+<div>
+<div class="ph"><img src="ramnesh_me.jpeg" alt="Portrait of Ramnesh"><br></div>
+<div class="stat"><b></b><span>Currently building <strong>SKOT</strong></span></div>
+</div>
+</div>
+<div class="quote">Building things that fly - and the systems that keep them flying safely.</div></section>
+
+<section id="projects"><div class="w">
+<h2><span>#</span>projects</h2>
+<div class="grid">
+<article class="card" style="border-style:dashed;border-color:var(--ac)"><div class="ph"><img src="SKOT.png" alt="SKOT"></div><div class="tags">UAV · AI · Geospatial · Cloud</div><div class="b"><h3>SKOT</h3><p>Dual-mode, real-time AI airspace management platform for autonomous drone navigation, from edge devices to cloud.</p><div class="acts"><a class="btn" href="https://officialskot.vercel.app/">Live</a><a class="btn g" href="https://officialskot.vercel.app/">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="LOGO.jpeg" alt="7EVEN"></div><div class="tags">React Native · Expo · Supabase · Vercel</div><div class="b"><h3>7EVEN</h3><p>NFC smart card ecosystem with permanent digital profiles, a mobile app and an admin dashboard.</p><div class="acts"><a class="btn" href="https://7even.online">Live</a><a class="btn g" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="MyAlgoBot.png" alt="MyAlgoBot"></div><div class="tags">Python · GCP · Kite · Alpaca · Binance</div><div class="b"><h3>MyAlgoBot</h3><p>Algorithmic trading bot across NSE, US and crypto markets with EMA, Bollinger and MACD consensus, plus stop-loss.</p><div class="acts"><a class="btn" href="https://alpaca.markets/learn/building-myalgobot-a-multi-market-algorithmic-trading-system-with-alpaca">Article</a><a class="btn g" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="R4_Rescue.png" alt="R4 Rescue"></div><div class="tags">Edge AI · Embedded · Local inference</div><div class="b"><h3>R4 Rescue</h3><p>Fully offline AI disaster-response platform with radiation, gas and through-wall heat sensing.</p><div class="acts"><a class="btn" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="AcciSense.png" alt="AcciSense"></div><div class="tags">IoT · Sensor fusion · GPS</div><div class="b"><h3>AcciSense</h3><p>Automated accident detection that alerts responders with GPS location and sensor telemetry.</p><div class="acts"><a class="btn" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="Sign_Language_Translator.png" alt="Sign language translator"></div><div class="tags">MediaPipe · Deep learning · OpenCV</div><div class="b"><h3>Two-way Sign Language Translator</h3><p>Real-time speech-to-sign and sign-to-speech translation using hand landmark detection.</p><div class="acts"><a class="btn" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="E-Challan_System.png" alt="E-Challan"></div><div class="tags">IoT · Embedded sensors · Automation</div><div class="b"><h3>E-Challan Pollution Control</h3><p>Sensor-based emission checks that auto-generate e-challans for polluting vehicles.</p><div class="acts"><a class="btn" href="#">Details</a></div></div></article>
+<article class="card"><div class="ph"><img src="rocket_one.jpeg" alt="Rocketry"></div><div class="tags">Rocketry · Satellite · Drones</div><div class="b"><h3>Model Rocketry & Satellite Integration</h3><p>Objectives based model rockets and CAN-7USAT payloads development.</p><div class="acts"><a class="btn" href="#">Details</a></div></div></article>
+</div></div></section>
+
+<section id="skills"><div class="w">
+<h2><span>#</span>skills</h2>
+<div class="skills">
+<div class="box"><h4>Languages</h4><p>Python JavaScript TypeScript SQL Bash C/C++</p></div>
+<div class="box"><h4>Web</h4><p>React React Native Expo Next.js Node.js Express HTML5 CSS3</p></div>
+<div class="box"><h4>AI / ML</h4><p>TensorFlow Scikit-learn OpenCV MediaPipe</p></div>
+<div class="box"><h4>Embedded</h4><p>ESP32 Arduino RaspberryPi Pixhawk ArduPilot Telemetry</p></div>
+<div class="box"><h4>Simulation</h4><p>Fusion360 MATLAB Ansys OpenRocket RockSim</p></div>
+<div class="box"><h4>Cloud &amp; Security</h4><p>Git Vercel Supabase GCP BurpSuite Linux</p></div>
+<div class="box"><h4>APIs</h4><p>Binance Kite Alpaca Ollama OpenAI</p></div>
+</div></div></section>
+
+<section id="experience"><div class="w">
+<h2><span>#</span>experience</h2>
+<div class="tl">
+<article><time>2026 – present</time><h3>SKOT (Sky Over Transmission)</h3><ul><li>Architecting a dual-mode, AI-driven UAV airspace platform for autonomous drone navigation.</li><li>Building drone traffic ingestion, geospatial processing and low-latency command-and-control pipelines.</li><li>R&amp;D on computer vision and sensor fusion for airspace awareness.</li></ul></article>
+<article><time>2026 – present</time><h3>PSIT Vyomnauts – Structure, avionics and recovery</h3><ul><li>Leading structure, avionics and recovery for the rocket and CAN-7USAT.</li><li>Dual-stage descent, pyro and non-pyro separation, onboard terrain-classification ML and drone-assisted precision landing.</li><li>Represented the team at BSX 2026, IN-SPACe and TEKNOFEST 2026.</li></ul></article>
+<article><time>2026</time><h3>7EVEN – Full-stack builder</h3><ul><li>Launched NFC smart card app with Supabase backend, Vercel deployment and admin dashboard.</li></ul></article>
+<article><time>2025 – 2029</time><h3>B.Tech CSE (AI/ML) – PSIT Kanpur, AKTU</h3><ul><li>Class XII 85% (2025) · Class X 95.4% (2023), Sacred Hearts Public School, Bareilly.</li></ul></article>
+</div>
+<h2 style="margin-top:56px;font-size:24px"><span>#</span>competitions</h2>
+<div class="cmp">
+<div><h3>TEKNOFEST 2026, Türkiye</h3><div class="r">Global rank 6 in PDR · rank 1 in India (model satellite)</div><ul><li>NIMAI-SAT model satellite and rocketry with PSIT Vyomnauts.</li></ul></div>
+<div><h3>TEKNOFEST NSosyal Innovation</h3><div class="r">Scored 80/100 in technical design report</div><ul><li>NSosyal InsightAI, an explainable Turkish-native AI trust layer.</li></ul></div>
+<div><h3>ISRO IN-SPACe · CAN-7USAT</h3><div class="r">TRISHUL II and KESHAV-SAT</div><ul><li>Structure, avionics, recovery and ML inference.</li></ul></div>
+<div><h3>Smart India Hackathon 2026</h3><div class="r">Top 45 of 300 teams (internal round)</div><ul><li>PRAGATI, AI-powered railway traffic control.</li></ul></div>
+<div><h3>Bharatiya Antariksh Hackathon</h3><div class="r">ISRO 2026</div><ul><li>Route Resilience: occlusion-robust road extraction and criticality analysis.</li></ul></div>
+<div><h3>ProTech 2k26 · TechExpo</h3><div class="r">PSIT Kanpur</div><ul><li>R4 Rescue and AcciSense, recognised for embedded and IoT work.</li></ul></div>
+</div>
+<h2 style="margin-top:56px;font-size:24px"><span>#</span>certifications</h2>
+<div class="cmp">
+<div><h3>100 Days of Code: Python Pro Bootcamp</h3><div class="r">Udemy · 2026</div></div>
+<div><h3>Complete Full-Stack Web Development Bootcamp</h3><div class="r">Udemy · 2025</div></div>
+</div>
+</div></section>
+
+<section id="resume"><div class="w">
+<h2><span>#</span>resume</h2>
+<div class="resume">
+<div class="doc" aria-hidden="true"><b>RAMNESH KUMAR SAHU</b><i class="a"></i><i></i><i style="width:85%"></i><i style="width:70%"></i><i class="a" style="margin-top:6px"></i><i></i><i style="width:90%"></i><i style="width:60%"></i><i class="a" style="margin-top:6px"></i><i style="width:80%"></i><i style="width:50%"></i></div>
+<div>
+<p>My full resume covers education, skills, projects, aerospace competitions and certifications.</p>
+<ul><li>B.Tech CSE (AI/ML), PSIT Kanpur</li><li>SKOT, PSIT Vyomnauts, 7EVEN and more</li><li>TEKNOFEST, ISRO IN-SPACe and hackathons</li></ul>
+<p class="acts"><a class="btn" href="Ramnesh_Kumar_Sahu_CV.pdf" download="Ramnesh_Kumar_Sahu_Resume.pdf">Download resume (PDF)</a></p>
+<small>PDF · 3 pages</small>
+</div></div></div></section>
+
+<section id="about"><div class="w">
+<h2><span>#</span>about-me</h2>
+<div class="about">
+<div>
+<p>Hello, I’m Ramnesh!</p>
+<p>I’m a Computer Science (AI/ML) student at PSIT Kanpur and building SKOT, a deep-tech airspace management platform for defence and commercial drones.</p>
+<p>I like problems that need both code and hardware: flight controllers, telemetry, computer vision and the cloud that ties them together. I also trade algorithmically and lead structure and avionics on a student rocketry team.</p>
+<p style="margin-top:24px"><a class="btn" href="#contact">Say hello</a></p>
+</div>
+<div class="ph"><img src="rocketry.jpeg" alt="Rocketry"><br></div>
+</div></div></section>
+
+<section id="contact"><div class="w">
+<h2><span>#</span>contact</h2>
+<div class="contact">
+<p>I’m open to internships, collaborations and deep-tech projects in drones, aerospace and AI. If you have another question, don’t hesitate to reach out.</p>
+<div class="cbox"><b>Contact me here</b>
+<a href="mailto:ramnesh07rks@gmail.com">ramnesh07rks@gmail.com</a>
+<a href="tel:+919027294479">+91 90272 94479</a>
+<a href="https://www.linkedin.com/in/ramnesh-sahu">linkedin.com/in/ramnesh-sahu</a>
+<a href="https://github.com/RAMNESH007">github.com/RAMNESH007</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="w">
+<div><b>Ramnesh Kumar Sahu</b><br>Kanpur, India</div>
+<div>© 2026 Ramnesh Kumar Sahu</div>
+</div></footer>
+
+<script>
+var b=document.getElementById('bg'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)});
+</script>
+</body>
+</html>
